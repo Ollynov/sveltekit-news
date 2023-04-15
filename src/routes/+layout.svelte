@@ -47,11 +47,12 @@
             Finally a news feed that's curated for your own interests
           </p>
         </div>
-        <AboutSection classNames="mt-12 hidden lg:block" />
+				<div class="mt-12 hidden lg:block">
+					<AboutSection  />
+				</div>
         <section class="mt-10 lg:mt-12">
           <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only">
 						<TinyWave />
-
             <span class="ml-2.5">Socials</span>
           </h2>
           <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
@@ -63,14 +64,12 @@
       <Wave />
       <div class="relative">
 				<slot />
-
 			</div>
     </main>
     <footer class="border-t border-slate-200 bg-slate-50 py-10 pb-40 sm:py-16 sm:pb-32 lg:hidden">
       <div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4">
-        <!-- <AboutSection /> -->
+        <AboutSection />
         <h2 class="mt-8 flex items-center font-mono text-sm font-medium leading-7 text-slate-900">
-          <!-- <PersonIcon class="h-3 w-auto fill-slate-300" /> -->
           <span class="ml-2.5">Hosted by</span>
         </h2>
         <div class="mt-2 flex gap-6 text-sm font-bold leading-7 text-slate-900">
@@ -80,33 +79,10 @@
     </footer>
 
   </main>
-
-	<!-- <footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer> -->
 </div>
 
 <style>
 
-
-
-	/* footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	} */
 </style>
 
 
