@@ -1,10 +1,23 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
   content: ['./src/routes/*.{html,js,svelte,ts}'],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Satoshi', ...defaultTheme.fontFamily.sans],
+      },
+      spacing: {
+        18: '4.5rem',
+        112: '28rem',
+        120: '30rem',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

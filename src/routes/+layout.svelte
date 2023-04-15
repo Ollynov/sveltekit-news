@@ -1,12 +1,13 @@
 <script>
 	import Header from './Header.svelte';
+	import Wave from './layout/Wave.svelte';
 	import './styles.css';
 	import "../app.css";
 
 </script>
 
-<div class="app">
-	<Header />
+<div >
+	<!-- <Header /> -->
 
 	<main>
     <header class="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
@@ -77,7 +78,7 @@
       </div>
     </header>
     <main class="border-t border-slate-200 lg:relative lg:mb-28 lg:ml-112 lg:border-t-0 xl:ml-120">
-      <!-- <Waveform class="absolute left-0 top-0 h-20 w-full" /> -->
+      <Wave />
       <div class="relative">
 				<slot />
 
@@ -104,11 +105,7 @@
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+
 
 
 	/* footer {

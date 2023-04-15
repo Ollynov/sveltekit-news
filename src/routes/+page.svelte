@@ -15,7 +15,7 @@
 		<source srcset={welcome} type="image/webp" />
 		<img src={welcome_fallback} alt="Welcome" />
 	</picture> -->
-	<Counter />
+	<!-- <Counter /> -->
 </section>
 
 <style lang="postcss">
