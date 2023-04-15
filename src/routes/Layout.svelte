@@ -1,14 +1,19 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
-	import "../app.css";
+	import { page } from '$app/stores';
 
+	// let count = 0;
+
+	// const displayed_count = spring();
+	// $: displayed_count.set(count);
+	// $: offset = modulo($displayed_count, 1);
+
+	// function modulo(n, m) {
+	// 	// handle negative numbers
+	// 	return ((n % m) + m) % m;
+	// }
 </script>
 
-<div class="app">
-	<Header />
-
-	<main>
+<div>
     <header class="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
       <div class="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
         <span class="font-mono text-slate-500">Created by</span>
@@ -78,10 +83,7 @@
     </header>
     <main class="border-t border-slate-200 lg:relative lg:mb-28 lg:ml-112 lg:border-t-0 xl:ml-120">
       <!-- <Waveform class="absolute left-0 top-0 h-20 w-full" /> -->
-      <div class="relative">
-				<slot />
-
-			</div>
+      <div class="relative">Hi</div>
     </main>
     <footer class="border-t border-slate-200 bg-slate-50 py-10 pb-40 sm:py-16 sm:pb-32 lg:hidden">
       <div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4">
@@ -96,39 +98,13 @@
       </div>
     </footer>
 
-  </main>
+  </div>
 
-	<!-- <footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer> -->
-</div>
 
 <style>
-	.app {
+	header {
 		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
+		justify-content: space-between;
 	}
 
-
-	/* footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	} */
 </style>
-
-
-
