@@ -10,8 +10,8 @@
   class="py-10 sm:py-12"
 >
   <!-- <Container> -->
-    <div class="flex flex-row w-8/12 ml-28">
-      <div class="mr-8 w-1/3">
+    <div class="flex flex-col md:flex-row w-full md:w-8/12 ml-10 md:ml-18 xl:ml-20">
+      <div class="md:mr-4 xl:mr-6 w-2/3 md:w-1/3 mb-4 md:mb-0">
         <img
           src={article.urlToImage}
           alt=""
@@ -22,7 +22,7 @@
       <div class="flex flex-col items-start w-2/3">
         <h2
           id={`article-${article?.id}-title`}
-          class="mt-2 text-lg font-bold text-slate-900"
+          class="text-lg font-bold text-slate-900"
         >
           <a href={`/${article?.id}`}>{article?.title}</a>
         </h2>
