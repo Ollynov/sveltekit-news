@@ -2,18 +2,30 @@
   export let article
   import heart from '$lib/images/heart-icon.svg';
   import heartFilled from '$lib/images/heart-icon-filled.svg';
+  import { favorites } from './stores.js';
 
   // let date = new Date(article?.published)
   
   let favorite = false;
   const toggleFav = () => {
     favorite = !favorite;
+    
+    favorites.update(current => {
+      console.log('ok current: ', current)
+      if (current[article.url]) {
+        delete current[article.url]
+      } else {
+        current[article.url] = article.title;
+      }
+      return current;
+    });
   }
+
 </script>
   
 
 <article
-  aria-labelledby={`article-${article?.id}-title`}
+  aria-labelledby={`article-${article?.id}-title`}s
   class="py-10 sm:py-12"
 >
     <div class="flex flex-col md:flex-row w-full md:w-8/12 ml-10 md:ml-18 xl:ml-20">

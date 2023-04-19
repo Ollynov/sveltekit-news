@@ -5,6 +5,7 @@
 
 	import AboutSection from './layout/About.svelte';
 	import SocialLinks from './layout/SocialLinks.svelte';
+	import SelectedFavs from './articles/SelectedFavs.svelte';
 	import './styles.css';
 	import "../app.css";
 	import TinyWave from './utility-components/icons/TinyWave.svelte';
@@ -47,17 +48,26 @@
             Finally a news feed that's curated for your own interests
           </p>
         </div>
-				<div class="mt-12 hidden lg:block">
+				<div class="mt-10 hidden lg:block">
 					<AboutSection  />
 				</div>
-        <section class="mt-10 lg:mt-12">
+        <section class="mt-10">
           <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only">
 						<TinyWave />
             <span class="ml-2.5">Socials</span>
           </h2>
           <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
-					<SocialLinks />
-        </section>
+					<SocialLinks />      
+        </section>    
+        <SelectedFavs />    
+        <!-- <section class="mt-10 lg:mt-12">
+          <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only">
+						<TinyWave />
+            <span class="ml-2.5">Your Favorites</span>
+          </h2>
+          <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
+					
+        </section> -->
       </div>
     </header>
     <main class="border-t border-slate-200 lg:relative lg:mb-28 lg:ml-1 lg:border-t-0 xl:ml-120 bg-slate-50">
