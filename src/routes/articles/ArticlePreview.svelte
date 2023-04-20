@@ -11,7 +11,6 @@
     favorite = !favorite;
     
     favorites.update(current => {
-      console.log('ok current: ', current)
       if (current[article.url]) {
         delete current[article.url]
       } else {
@@ -53,7 +52,7 @@
           {article?.description}
         </p>
         <div class="flex flex-row">
-          <p  class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
+          <p class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
             Read More
           </p>          
           <div on:click={toggleFav}  class="ml-8 flex flex-row cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
