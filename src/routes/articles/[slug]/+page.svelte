@@ -4,7 +4,6 @@
 
   $: article = data.article
 
-  console.log('ok got data: ', data)
 </script>
 
 
