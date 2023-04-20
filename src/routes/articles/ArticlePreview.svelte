@@ -20,6 +20,11 @@
     });
   }
 
+  const formatForUrl = (string) => {
+    let formatted = string.split(" ").join("-")
+    return formatted.split("%").join("")
+  }
+
 </script>
   
 
@@ -40,7 +45,7 @@
         <h2
           class="text-lg font-bold text-slate-900"
         >
-          <a href={`/articles/${article.title}`}>{article?.title}</a>
+          <a href={`/articles/${formatForUrl(article.title)}`}>{article?.title}</a>
         </h2>
   
         <!-- <FormattedDate
@@ -51,7 +56,7 @@
           {article?.description}
         </p>
         <div class="flex flex-row">
-          <a href={`/articles/${article.title}`} class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
+          <a href={`/articles/${formatForUrl(article.title)}`} class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
             Read More
           </a>          
           <div on:click={toggleFav}  class="ml-8 flex flex-row cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
