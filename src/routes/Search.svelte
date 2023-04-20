@@ -9,12 +9,9 @@
     const key = "d52279ec3b1f488a89d76a85580c7d82"
     const res = await fetch(`https://newsapi.org/v2/everything?q=${value}&apiKey=${key}`);
     const fetchedData = await res.json();
-
-    console.log('ok got dis: ', fetchedData)
     
     if (fetchedData) {
       const firstTen = fetchedData.articles.slice(0, 10);
-      console.log('ok first ten: ', firstTen)
       allArticles.set(firstTen)
     } else {
       throw error(404, 'Not found');
