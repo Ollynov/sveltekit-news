@@ -1,6 +1,6 @@
 <script>
 	import Wave from './layout/Wave.svelte';
-	import newzy from '$lib/images/newzy.png';
+	import newzy from '$lib/images/Newzy.png';
 
 	import AboutSection from './layout/About.svelte';
 	import SocialLinks from './layout/SocialLinks.svelte';
