@@ -28,9 +28,7 @@
 
 		</div>
 		<div class="divide-y divide-slate-200 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-200">
-			{#each articles as article}
-				<!-- <ArticlePreview article={article} /> -->
-		
+			{#each articles as article}		
 				<ArticlePreview article={article}/>
 			{/each}
 		</div>
