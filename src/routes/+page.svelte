@@ -1,17 +1,12 @@
 <script>
 	import Search from './Search.svelte';
-	// import Counter from './Counter.svelte';
-	// import welcome from '$lib/images/svelte-welcome.webp';
-	// import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import ArticlePreview from './articles/ArticlePreview.svelte'
 	import { allArticles } from './articles/stores';
 	export let data;
 
 	$: articles = data.articles
-	$: articlesFromSearch = allArticles
 
 	allArticles.subscribe(items => {
-		console.log("yo:", items)
 		articles = items
 	})
 
@@ -24,12 +19,6 @@
 </svelte:head>
 
 <section>
-	<!-- <picture>
-		<source srcset={welcome} type="image/webp" />
-		<img src={welcome_fallback} alt="Welcome" />
-	</picture> -->
-	<!-- <Counter /> -->
-	<h1>Yo: {articlesFromSearch[0]}</h1>
 	<div class="pb-12 pt-16 sm:pb-4 lg:pt-12">
 		<h1 class="text-2xl font-bold leading-7 text-slate-900">
 			Latest News
@@ -49,12 +38,4 @@
 </section>
 
 <style lang="postcss">
-	/* section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	} */
-
 </style>

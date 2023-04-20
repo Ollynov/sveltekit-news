@@ -1,5 +1,4 @@
 <script>
-	// import Header from './Header.svelte';
 	import Wave from './layout/Wave.svelte';
 	import newzy from '$lib/images/newzy.png';
 
@@ -14,7 +13,6 @@
 </script>
 
 <div >
-	<!-- <Header /> -->
 
 	<main>
     <header class="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
