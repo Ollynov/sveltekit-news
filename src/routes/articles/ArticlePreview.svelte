@@ -52,9 +52,9 @@
           {article?.description}
         </p>
         <div class="flex flex-row">
-          <p class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
+          <a href={`/articles/${article.title}`} class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
             Read More
-          </p>          
+          </a>          
           <div on:click={toggleFav}  class="ml-8 flex flex-row cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4">
             <span>Favorite</span>
             <span>

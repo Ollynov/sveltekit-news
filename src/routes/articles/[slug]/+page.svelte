@@ -25,8 +25,16 @@
               /> -->
             </div>
           </div>
+          <div class="md:mr-4 xl:mr-6 w-2/3 md:w-1/3 mb-4 md:mb-0">
+            <img
+              src={article.urlToImage}
+              alt=""
+              class="w-full"
+            />
+          </div>
+
           <p class="prose mt-8 font-medium leading-8 text-slate-700">
-            {article.description}
+            {@html article.description}
           </p>
         </header>
         <hr class="my-12 border-gray-200" />
