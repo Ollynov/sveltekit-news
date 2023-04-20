@@ -1,7 +1,8 @@
 <script>
 	// import { allArticles } from "./articles/stores";
 	// let value;
-	// export let data;
+	export let data;
+	console.log('ok data: in search: ', data);
 
 	// $: articles = data
 </script>

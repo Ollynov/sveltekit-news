@@ -24,7 +24,7 @@ const search = async (value) => {
 	const res = await fetch(`https://newsapi.org/v2/everything?q=${value}&apiKey=${API_KEY}`);
 	const fetchedData = await res.json();
 
-	if (fetchedData) {
+	if (fetchedData?.articles) {
 		const firstTen = fetchedData.articles.slice(0, 10);
 		return firstTen;
 	} else {
@@ -32,13 +32,13 @@ const search = async (value) => {
 	}
 };
 
-// export const actions = {
-//   default: async ({cookies, request}) => {
-//       let data = await request.formData()
-//       let searchInput = Object.fromEntries(data).name
-//       const results = search(searchInput)
-//       console.log('ok results: ', results)
+export const actions = {
+	default: async ({ cookies, request }) => {
+		let data = await request.formData();
+		let searchInput = Object.fromEntries(data).name;
+		const results = await search(searchInput);
+		console.log('ok results: ', results);
 
-//       return {results}
-//   }
-// };
+		return { results };
+	},
+};
