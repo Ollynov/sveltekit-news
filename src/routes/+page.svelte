@@ -8,6 +8,14 @@
 	export let data;
 
 	$: articles = data.articles
+	$: articlesFromSearch = allArticles
+
+	allArticles.subscribe(items => {
+		console.log("yo:", items)
+		articles = items
+	})
+
+
 </script>
 
 <svelte:head>
@@ -21,6 +29,7 @@
 		<img src={welcome_fallback} alt="Welcome" />
 	</picture> -->
 	<!-- <Counter /> -->
+	<h1>Yo: {articlesFromSearch[0]}</h1>
 	<div class="pb-12 pt-16 sm:pb-4 lg:pt-12">
 		<h1 class="text-2xl font-bold leading-7 text-slate-900">
 			Latest News

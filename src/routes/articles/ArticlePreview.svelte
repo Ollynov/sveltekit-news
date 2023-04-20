@@ -38,10 +38,9 @@
 
       <div class="flex flex-col items-start w-2/3">
         <h2
-          id={`article-${article?.id}-title`}
           class="text-lg font-bold text-slate-900"
         >
-          <a href={`/${article?.id}`}>{article?.title}</a>
+          <a href={`/articles/${article.title}`}>{article?.title}</a>
         </h2>
   
         <!-- <FormattedDate

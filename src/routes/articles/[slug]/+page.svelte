@@ -24,7 +24,7 @@
               /> -->
             </div>
           </div>
-          <div class="md:mr-4 xl:mr-6 w-2/3 md:w-1/3 mb-4 md:mb-0">
+          <div class=" w-2/3 md:w-full my-4 mx-auto">
             <img
               src={article.urlToImage}
               alt=""
