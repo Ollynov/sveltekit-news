@@ -5,8 +5,9 @@ import { API_KEY } from '$env/static/private';
 import { mockup } from '../lib/mockups/newsapi-mock.js';
 
 export const load = async ({ params }) => {
-	const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
-	const fetchedData = await res.json();
+	// const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
+	// const fetchedData = await res.json();
+	const fetchedData = null;
 
 	console.log('ok got back fetchedData: ', fetchedData);
 
