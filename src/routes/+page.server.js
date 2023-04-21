@@ -7,7 +7,6 @@ import { mockup } from '../lib/mockups/newsapi-mock.js';
 export const load = async ({ params }) => {
 	const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
 	const fetchedData = await res.json();
-	console.log('ok fetcheddata: ', fetchedData);
 
 	if (fetchedData?.articles) {
 		return {
@@ -37,7 +36,6 @@ export const actions = {
 		let data = await request.formData();
 		let searchInput = Object.fromEntries(data).name;
 		const results = await search(searchInput);
-		console.log('ok results: ', results);
 
 		return { articles: results };
 	},
