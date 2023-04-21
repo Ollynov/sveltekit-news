@@ -15,8 +15,8 @@
 		});
 	};
 
-	const formatForUrl = (string) => {
-		let formatted = string.split(' ').join('-');
+	const formatForUrl = () => {
+		let formatted = article?.title.split(' ').join('-') + `?publishedAt=${article.publishedAt}`;
 		return formatted.split('%').join('');
 	};
 </script>
@@ -29,7 +29,7 @@
 
 		<div class="flex flex-col items-start w-2/3">
 			<h2 class="text-lg font-bold text-slate-900">
-				<a href={`/articles/${formatForUrl(article.title)}`}>{article?.title}</a>
+				<a href={`/articles/${formatForUrl()}`}>{article?.title}</a>
 			</h2>
 
 			<!-- <FormattedDate
@@ -41,7 +41,7 @@
 			</p>
 			<div class="flex flex-row">
 				<a
-					href={`/articles/${formatForUrl(article.title)}`}
+					href={`/articles/${formatForUrl()}`}
 					class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4"
 				>
 					Read More

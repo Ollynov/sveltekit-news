@@ -9,7 +9,6 @@
 			method: 'POST',
 			body: data,
 		});
-		console.log('ok got this response: ', response);
 		const result = deserialize(await response.text());
 		allArticles.set(result.data.articles);
 	}

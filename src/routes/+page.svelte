@@ -8,6 +8,7 @@
 	allArticles.subscribe((items) => {
 		// we are subscribed to our store here, and will update the articles any time a user searches. We reverse just to visually see the difference in the case were using our mock data
 		articles = items.reverse();
+		console.log('ok articles after search: ', articles);
 	});
 
 	$: articles = data.articles;
