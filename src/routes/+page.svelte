@@ -1,14 +1,12 @@
 <script>
 	import Search from './Search.svelte';
 	import ArticlePreview from './articles/ArticlePreview.svelte';
-	// import { allArticles } from './articles/stores';
 	export let data; // default data that we get back from our load function (on the server) when we first land on our homepage
 	import { allArticles } from './articles/stores';
 
 	allArticles.subscribe((items) => {
 		// we are subscribed to our store here, and will update the articles any time a user searches. We reverse just to visually see the difference in the case were using our mock data
 		articles = items.reverse();
-		console.log('ok articles after search: ', articles);
 	});
 
 	$: articles = data.articles;
