@@ -7,6 +7,8 @@ export async function load({ params, url }) {
 	const res = await fetch(`https://newsapi.org/v2/everything?q=${params.slug}&apiKey=${API_KEY}`);
 	const fetchedData = await res.json();
 
+	console.log('ok got back for individiaul article: ', fetchedData);
+
 	if (fetchedData?.articles) {
 		return { article: fetchedData.articles[0] };
 	} else {
