@@ -30,7 +30,7 @@
         <div class="flex flex-row mt-1">
           <button class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900">
             Read More
-          </button>    
+          </button> 
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <div on:click={removeFav(url)}  class="ml-3 flex flex-row cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900">
               <img class="w-5 ml-0.5 " fill="#db2777" src={remove} alt="favorite" />

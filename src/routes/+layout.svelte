@@ -58,14 +58,7 @@
 					<SocialLinks />      
         </section>    
         <SelectedFavs />    
-        <!-- <section class="mt-10 lg:mt-12">
-          <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only">
-						<TinyWave />
-            <span class="ml-2.5">Your Favorites</span>
-          </h2>
-          <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
-					
-        </section> -->
+
       </div>
     </header>
     <main class="border-t border-slate-200 lg:relative lg:mb-28 lg:ml-1 lg:border-t-0 xl:ml-120 bg-slate-50">

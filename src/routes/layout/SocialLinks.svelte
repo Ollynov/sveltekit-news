@@ -3,7 +3,7 @@
     class="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
   >
   <a
-    href="/"
+    href="https://github.com/Ollynov"
     class="group flex items-center"
     aria-label={"github"}
   >
