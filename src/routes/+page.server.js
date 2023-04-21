@@ -28,7 +28,7 @@ const search = async (value) => {
 		const firstTen = fetchedData.articles.slice(0, 10);
 		return firstTen;
 	} else {
-		throw error(404, 'Not found');
+		return mockup.articles;
 	}
 };
 
@@ -39,6 +39,6 @@ export const actions = {
 		const results = await search(searchInput);
 		console.log('ok results: ', results);
 
-		return { results };
+		return { articles: results };
 	},
 };

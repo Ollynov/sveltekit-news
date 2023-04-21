@@ -2,13 +2,15 @@
 	import Search from './Search.svelte';
 	import ArticlePreview from './articles/ArticlePreview.svelte';
 	// import { allArticles } from './articles/stores';
-	export let data;
+	export let data; // default data that we get back from our load function (on the server) when we first land on our homepage
+	import { allArticles } from './articles/stores';
 
-	console.log('ok data: ', data);
+	allArticles.subscribe((items) => {
+		// we are subscribed to our store here, and will update the articles any time a user searches. We reverse just to visually see the difference in the case were using our mock data
+		articles = items.reverse();
+	});
 
-	// allArticles.subscribe(items => {
-	// 	articles = items
-	// })
+	$: articles = data.articles;
 </script>
 
 <svelte:head>
@@ -23,8 +25,8 @@
 			<Search />
 		</div>
 		<div class="divide-y divide-slate-200 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-200">
-			{#if data?.articles}
-				{#each data.articles as article}
+			{#if articles}
+				{#each articles as article}
 					<ArticlePreview {article} />
 				{/each}
 			{/if}
