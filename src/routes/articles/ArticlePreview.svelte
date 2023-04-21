@@ -4,12 +4,7 @@
 	import heartFilled from '$lib/images/heart-icon-filled.svg';
 	import { favorites } from './stores.js';
 
-	// let date = new Date(article?.published)
-
-	let favorite = false;
 	const toggleFav = () => {
-		favorite = !favorite;
-
 		favorites.update((current) => {
 			if (current[article.url]) {
 				delete current[article.url];
@@ -57,7 +52,7 @@
 				>
 					<span>Favorite</span>
 					<span>
-						{#if favorite}
+						{#if $favorites[article?.url]}
 							<img class="w-5 ml-0.5" fill="#db2777" src={heartFilled} alt="favorite" />
 						{:else}
 							<img class="w-5 ml-0.5" fill="#db2777" src={heart} alt="favorite" />
@@ -68,9 +63,3 @@
 		</div>
 	</div>
 </article>
-
-<style lang="postcss">
-	/* .text {
-		color: green;
-	} */
-</style>
