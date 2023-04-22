@@ -15,12 +15,8 @@
 		});
 	};
 
-	const formatForUrl = () => {
-		let formatted = article?.title.split(' ').join('-') + `?publishedAt=${article.publishedAt}`;
-		return formatted.split('%').join('');
-	};
-
 	const setCurrentArticle = () => {
+		localStorage.setItem('selectedArticle', JSON.stringify(article));
 		selectedArticle.set(article);
 	};
 </script>
