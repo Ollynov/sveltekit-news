@@ -8,8 +8,6 @@ export const load = async ({ params }) => {
 	const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
 	const fetchedData = await res.json();
 
-	console.log('ok got back fetchedData: ', fetchedData);
-
 	if (fetchedData?.articles.length > 0) {
 		return {
 			articles: fetchedData.articles,
@@ -25,7 +23,6 @@ const search = async (value) => {
 	const res = await fetch(`https://newsapi.org/v2/everything?q=${value}&apiKey=${API_KEY}`);
 	const fetchedData = await res.json();
 
-	console.log('ok got back searched data: ', fetchedData);
 	if (fetchedData?.articles) {
 		const firstTen = fetchedData.articles.slice(0, 10);
 		return firstTen;

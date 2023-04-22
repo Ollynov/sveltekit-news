@@ -2,7 +2,7 @@
 	export let article;
 	import heart from '$lib/images/heart-icon.svg';
 	import heartFilled from '$lib/images/heart-icon-filled.svg';
-	import { favorites } from './stores.js';
+	import { favorites, selectedArticle } from './stores.js';
 
 	const toggleFav = () => {
 		favorites.update((current) => {
@@ -15,9 +15,9 @@
 		});
 	};
 
-	const formatForUrl = () => {
-		let formatted = article?.title.split(' ').join('-') + `?publishedAt=${article.publishedAt}`;
-		return formatted.split('%').join('');
+	const setCurrentArticle = () => {
+		localStorage.setItem('selectedArticle', JSON.stringify(article));
+		selectedArticle.set(article);
 	};
 </script>
 
@@ -29,7 +29,7 @@
 
 		<div class="flex flex-col items-start w-2/3">
 			<h2 class="text-lg font-bold text-slate-900">
-				<a href={`/articles/${formatForUrl()}`}>{article?.title}</a>
+				<a href={`/articles/view`} on:click={setCurrentArticle}>{article?.title}</a>
 			</h2>
 
 			<!-- <FormattedDate
@@ -41,7 +41,8 @@
 			</p>
 			<div class="flex flex-row">
 				<a
-					href={`/articles/${formatForUrl()}`}
+					on:click={setCurrentArticle}
+					href={`/articles/view`}
 					class="flex cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4"
 				>
 					Read More
