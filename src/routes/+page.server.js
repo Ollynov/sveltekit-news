@@ -5,11 +5,8 @@ import { API_KEY } from '$env/static/private';
 import { mockup } from '../lib/mockups/newsapi-mock.js';
 
 export const load = async ({ params }) => {
-	// const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
-	// const fetchedData = await res.json();
-	const fetchedData = null;
-
-	console.log('ok got back fetchedData: ', fetchedData);
+	const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
+	const fetchedData = await res.json();
 
 	if (fetchedData?.articles.length > 0) {
 		return {
@@ -26,7 +23,6 @@ const search = async (value) => {
 	const res = await fetch(`https://newsapi.org/v2/everything?q=${value}&apiKey=${API_KEY}`);
 	const fetchedData = await res.json();
 
-	console.log('ok got back searched data: ', fetchedData);
 	if (fetchedData?.articles) {
 		const firstTen = fetchedData.articles.slice(0, 10);
 		return firstTen;
