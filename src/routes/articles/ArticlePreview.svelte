@@ -47,6 +47,7 @@
 				>
 					Read More
 				</a>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
 					on:click={toggleFav}
 					class="ml-8 flex flex-row cursor-pointer items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 mt-4"

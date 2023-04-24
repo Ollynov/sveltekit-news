@@ -22,7 +22,6 @@
 		id="name"
 		class="block px-4 w-full rounded-l-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-pink-300 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
 	/>
-	<!-- <input bind:value type="text" name="name" id="name" class="block px-4 w-full rounded-l-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-pink-300 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"> -->
 	<button
 		type="submit"
 		formaction="/"

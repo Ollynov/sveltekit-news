@@ -1,3 +1,4 @@
+<!-- Here I manually check whether we are running on client, but we can also just disable SSR and our logic here will only run on client.  -->
 <script>
 	import { selectedArticle } from '../stores.js';
 	import { browser } from '$app/environment';
